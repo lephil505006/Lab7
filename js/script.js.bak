@@ -1,8 +1,14 @@
 function init(){
 
-  function alertFunction() {
-    var input = document.getElementById("entryinput").values;
-	alert("Philip Le: " + message);
-  }
+  var button = document.getElementById("entrybutton");
+  button.addEventListener("click", clickButton);
 
+  function clickButton() {
+    var input = document.getElementById("entryinput").value;
+	alert("Philip Le: " + input);
+	
+	var text = document.getElementById("textoutput");
+	textObj.innerHTML = input;
+  }
+}
 window.addEventListener('load', init);

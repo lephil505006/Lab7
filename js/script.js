@@ -1,10 +1,14 @@
 function init(){
 
-  document.getElementById('entrybutton').addEventListener("click", clickButton);
+  var button = document.getElementById("entrybutton");
+  button.addEventListener("click", clickButton);
 
   function clickButton() {
-    var input = document.getElementById("entryinput").values;
-	alert("Philip Le: " + message);
+    var input = document.getElementById("entryinput").value;
+	alert("Philip Le: " + input);
+	
+	var text = document.getElementById("textoutput");
+	text.innerHTML = input;
   }
-
+}
 window.addEventListener('load', init);
